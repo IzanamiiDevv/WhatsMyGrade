@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Evaluator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Grade Evaluaation</h1>
+    <div class="inputF">
+        <p>Enter Your Grade Below</p>
+        <input type="number" id="textfield" placeholder="ex:75" required>
+    </div>
+    <br>
+    <br>
+    <button type="button" onclick="Evaluate()" class="button">
+        <div class="top">Calculate Your Grade!</div>
+        <div class="bottom"></div>
+    </button>
+    </div>
+    <script>
+
+function Evaluate() {
+    const grade = document.getElementById('textfield').value - 0;
+    if (grade >= 101) alert("Invalid Grade");
+    if (grade <= 100 && grade >= 98) alert("With Highest Honors");
+    if (grade <= 97 && grade >= 95) alert("With High Honors");
+    if (grade <= 94 && grade >= 90) alert("With Honors");
+    if (grade <= 89 && grade >= 75) alert("Passed");
+    if (grade <= 74) alert("Failed");
+}
+
+    </script>
+</body>
+</html>
