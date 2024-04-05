@@ -1,10 +1,10 @@
-#include <emscripten.h>
+//#include <emscripten.h>
 #include <cstdio>
 #include <cstring>
 #include <cstdlib>
 
 extern "C" {
-    EMSCRIPTEN_KEEPALIVE
+    //EMSCRIPTEN_KEEPALIVE
     const char* evaluate(int grade) {
         if (grade >= 101) return "Invalid Grade";
         if (grade <= 100 && grade >= 98) return "With Highest Honors";
